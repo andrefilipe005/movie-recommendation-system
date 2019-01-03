@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Movies recommendations - Collaborative filtering</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- styles -->
+    <style>
+        body {
+            margin-left: 25%;
+            margin-right: 25%;
+            width: 50%;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div class="row" style="margin-top: 10%;">
+    <div class="col-md-12">
+        <div class="well">
+            <h4 class="text-primary" style="font-family: verdana;">Collaborative filtering</h4>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="margin-top: 5%;">
+    <div id="svd" class="col-md-12" style="padding-left: 15%; padding-right: 15%;">
+        <ul class="list-group">
+            <li class="list-group-item text-primary">SVD algorithm</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div id="use-svd" class="col-md-12" style="padding-left: 15%; padding-right: 15%;">
+
+    </div>
+</div>
+
+<div class="row" style="margin-top: 5%;">
+    <div id="nmf" class="col-md-12" style="padding-left: 15%; padding-right: 15%;">
+        <ul class="list-group">
+            <li class="list-group-item text-primary">NMF algorithm</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div id="use-nmf" class="col-md-12" style="padding-left: 15%; padding-right: 15%;">
+
+    </div>
+</div>
+
+<div class="row" style="margin-top: 5%;">
+    <div id="als" class="col-md-12" style="padding-left: 15%; padding-right: 15%;">
+        <ul class="list-group">
+            <li class="list-group-item text-primary">ALS algorithm</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div id="use-als" class="col-md-12" style="padding-left: 15%; padding-right: 15%;">
+
+    </div>
+</div>
+
+<div class="row" style="margin-top: 5%;">
+    <div id="sgd" class="col-md-12" style="padding-left: 15%; padding-right: 15%;">
+        <ul class="list-group">
+            <li class="list-group-item text-primary">SGD algorithm</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div id="use-sgd" class="col-md-12" style="padding-left: 15%; padding-right: 15%;">
+
+    </div>
+</div>
+
+<div class="row" style="margin-top: 5%;">
+    <div id="knn" class="col-md-12" style="padding-left: 15%; padding-right: 15%;">
+        <ul class="list-group">
+            <li class="list-group-item text-primary">KNN algorithm</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row" style="margin-bottom: 5%;">
+    <div id="use-knn" class="col-md-12" style="padding-left: 15%; padding-right: 15%;">
+
+    </div>
+</div>
+
+<!-- scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+<script type="text/jsx">
+
+    /** @jsx React.DOM */
+
+    function NumberListSVD(props) {
+      const numbers = props.numbers;
+      const listItems = numbers.map((number) =>
+        <li className="list-group-item" key={number.toString()}>
+            {number}
+        </li>
+      );
+      return (
+        <ul className="list-group">{listItems}</ul>
+      );
+    }
+
+    function NumberListKNN(props) {
+      const numbers = props.numbers;
+      const listItems = numbers1.map((number) =>
+        <li className="list-group-item" key={number.toString()}>
+          {number}
+        </li>
+      );
+      return (
+        <ul className="list-group">{listItems}</ul>
+      );
+    }
+
+    function NumberListALS(props) {
+      const numbers = props.numbers;
+      const listItems = numbers2.map((number) =>
+        <li className="list-group-item" key={number.toString()}>
+          {number}
+        </li>
+      );
+      return (
+        <ul className="list-group">{listItems}</ul>
+      );
+    }
+
+    function NumberListSGD(props) {
+      const numbers = props.numbers;
+      const listItems = numbers3.map((number) =>
+        <li className="list-group-item" key={number.toString()}>
+          {number}
+        </li>
+      );
+      return (
+        <ul className="list-group">{listItems}</ul>
+      );
+    }
+
+    function NumberListNMF(props) {
+      const numbers = props.numbers;
+      const listItems = numbers4.map((number) =>
+        <li className="list-group-item" key={number.toString()}>
+          {number}
+        </li>
+      );
+      return (
+        <ul className="list-group">{listItems}</ul>
+      );
+    }
+
+    const performance_svd = {{ performance_svd }};
+    numbers = []
+    for (var number in performance_svd)
+    {
+        if (number == 0)
+        {
+            numbers.push("RMSE: " + performance_svd[number]);
+        }
+        else if (number == 1)
+        {
+            numbers.push("MAE: " + performance_svd[number]);
+        }
+        else if (number == 2)
+        {
+            numbers.push("TIME: " + performance_svd[number]);
+        }
+    }
+
+    const performance_knn = {{ performance_knn }};
+    numbers1 = []
+    for (var number in performance_knn)
+    {
+        if (number == 0)
+        {
+            numbers1.push("RMSE: " + performance_knn[number]);
+        }
+        else if (number == 1)
+        {
+            numbers1.push("MAE: " + performance_knn[number]);
+        }
+        else if (number == 2)
+        {
+            numbers1.push("TIME: " + performance_knn[number]);
+        }
+    }
+
+    const performance_als = {{ performance_als }};
+    numbers2 = []
+    for (var number in performance_als)
+    {
+        if (number == 0)
+        {
+            numbers2.push("RMSE: " + performance_als[number]);
+        }
+        else if (number == 1)
+        {
+            numbers2.push("MAE: " + performance_als[number]);
+        }
+        else if (number == 2)
+        {
+            numbers2.push("TIME: " + performance_als[number]);
+        }
+    }
+
+    const performance_sgd = {{ performance_sgd }};
+    numbers3 = []
+    for (var number in performance_sgd)
+    {
+        if (number == 0)
+        {
+            numbers3.push("RMSE: " + performance_sgd[number]);
+        }
+        else if (number == 1)
+        {
+            numbers3.push("MAE: " + performance_sgd[number]);
+        }
+        else if (number == 2)
+        {
+            numbers3.push("TIME: " + performance_sgd[number]);
+        }
+    }
+
+    const performance_nmf = {{ performance_nmf }};
+    numbers4 = []
+    for (var number in performance_nmf)
+    {
+        if (number == 0)
+        {
+            numbers4.push("RMSE: " + performance_nmf[number]);
+        }
+        else if (number == 1)
+        {
+            numbers4.push("MAE: " + performance_nmf[number]);
+        }
+        else if (number == 2)
+        {
+            numbers4.push("TIME: " + performance_nmf[number]);
+        }
+    }
+
+    if(numbers.length > 0)
+    {
+        ReactDOM.render(
+          <NumberListSVD numbers={numbers} />,
+          document.getElementById('use-svd')
+        );
+    }
+
+    if(numbers1.length > 0)
+    {
+        ReactDOM.render(
+          <NumberListKNN numbers1={numbers1} />,
+          document.getElementById('use-knn')
+        );
+    }
+
+    if(numbers2.length > 0)
+    {
+        ReactDOM.render(
+          <NumberListALS numbers2={numbers2} />,
+          document.getElementById('use-als')
+        );
+    }
+
+    if(numbers3.length > 0)
+    {
+        ReactDOM.render(
+          <NumberListSGD numbers3={numbers3} />,
+          document.getElementById('use-sgd')
+        );
+    }
+
+    if(numbers4.length > 0)
+    {
+        ReactDOM.render(
+          <NumberListNMF numbers4={numbers4} />,
+          document.getElementById('use-nmf')
+        );
+    }
+
+</script>
+</body>
+</html>

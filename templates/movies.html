@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Movies recommendations</title>
+</head>
+<body>
+    <div class ="container">
+        <header class="blog-header py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <div class="col-4 pt-1">
+                </div>
+                <div class="col-4 text-center">
+                    <h1 class="blog-header-logo text-dark">Movie Recommendation</h1>
+                </div>
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                </div>
+            </div>
+        </header>
+
+        <div class="card-deck mb-3 text-center">
+            <div class="card mb-6 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Top Movies</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row justify-content-md-center">
+                        {% for movies in popularity_movies %}
+                            <div class="col-md-auto">
+                                <div class="badge badge-primary text-wrap" style="background-color: rgba(0, 0, 0, 0.6);">
+                                    {{ movies }}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <form class="form-center" action = "http://localhost:5000" method = "POST">
+                    <label for="genre">Genre: </label>
+                    <input name="genre" id="genre">
+                    <div class="col-auto my-1">
+                        <input type="submit" class="btn btn-outline-secondary" value="Get Most Popular Movies By Genre">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <main class ="container" role="main">
+        <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Content Based Filtering</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">
+                        <small class="text-muted">
+                            Write a movie that you like !
+                        </small>
+                    </h1>
+                    <div class="recommendation">
+                        <form action = "http://localhost:5000/content_based_filtering" method = "POST">
+                            <input name="movie" id="movie">
+                            <input type="submit" class="btn btn-outline-secondary" value="Get Recommendation">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Collaborative Filtering</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">
+                        <small class="text-muted">
+                            asd
+                        </small>
+                    </h1>
+                    <div class="recommendation">
+                        <form method="POST" action="http://localhost:5000/collaborative_filtering" style="margin-top: 10%; margin-left: 5%;">
+                            <input type="submit" name="predict" value="Make a recommendation" class="btn btn-outline-secondary">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <small class="d-block mb-3 text-muted">Bootstrap | © 2017-2018</small>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Warning</h5>
+                    <div class="list-unstyled text-small">
+                        <a class="text-muted">Please be warned that validations are not performed.This is any genre or movie barely introduced the server gives an error not alerting the cause of the same.</a>
+                    </div>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Some Movie Genres</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted">Animation</a></li>
+                        <li><a class="text-muted">Adventure</a></li>
+                        <li><a class="text-muted">Thriller</a></li>
+                        <li><a class="text-muted">Comedy</a></li>
+                        <li><a class="text-muted">Action</a></li>
+                        <li><a class="text-muted">Drama</a></li>
+                        <li><a class="text-muted">Crime</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Team</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted">Filip Zupančič</a></li>
+                        <li><a class="text-muted">André Filipe</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
