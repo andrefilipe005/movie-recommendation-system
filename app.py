@@ -44,21 +44,26 @@ def collaborative_filtering():
     performance_als = []
     performance_sgd = []
     performance_knn = []
+    performance_cosine = []
+    performance_pearson = []
     if request.method == 'POST':
         if 'predict' in request.form:
             print("Request successful")
             user_id = request.form.get('user_id')
             print(user_id)
-            performance_svd = cf.use_svd()
-            performance_knn = cf.use_knn()
-            performance_als = cf.use_als()
-            performance_sgd = cf.use_sgd()
-            performance_nmf = cf.use_nmf()
+            performance_svd = collaborative_filtering_handler.use_svd()
+            performance_knn = collaborative_filtering_handler.use_knn()
+            performance_als = collaborative_filtering_handler.use_als()
+            performance_sgd = collaborative_filtering_handler.use_sgd()
+            performance_nmf = collaborative_filtering_handler.use_nmf()
+            performance_cosine = collaborative_filtering_handler.use_cosine_similarity()
+            performance_pearson = collaborative_filtering_handler.use_pearson_baseline()
             # predictions = collaborative_filtering_handler.make_predictions(user_id)
 
-    return render_template('collaborative.html', performance_svd=performance_svd, performance_knn=performance_knn,
+    return render_template('index.html', performance_svd=performance_svd, performance_knn=performance_knn,
                            performance_als=performance_als, performance_sgd=performance_sgd,
-                           performance_nmf=performance_nmf)
+                           performance_nmf=performance_nmf, performance_cosine=performance_cosine,
+                           performance_pearson=performance_pearson)
 
 
 if __name__ == '__main__':

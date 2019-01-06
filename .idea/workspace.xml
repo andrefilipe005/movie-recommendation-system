@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1354da34-ceba-4b9b-a534-1ed92430d12d" name="Default Changelist" comment="" />
+    <list default="true" id="1354da34-ceba-4b9b-a534-1ed92430d12d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rs/collaborative_filtering_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/rs/collaborative_filtering_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/collaborative.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/collaborative.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,79 +21,34 @@
     <SUITE FILE_PATH="coverage/rc_ContentBased$contentBased_option1.coverage" NAME="contentBased_option1 Coverage Results" MODIFIED="1546069629858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rs" />
     <SUITE FILE_PATH="coverage/rc_ContentBased$rc_ContentBased.coverage" NAME="rc_ContentBased Coverage Results" MODIFIED="1546539258676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-860012746">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="8" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.21" value="1" />
-          <entry key="project.open.time.22" value="1" />
-          <entry key="project.open.time.23" value="1" />
-          <entry key="project.open.time.24" value="1" />
-          <entry key="project.open.time.25" value="2" />
-          <entry key="project.open.time.26" value="1" />
-          <entry key="project.open.time.27" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="11" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="html" value="17" />
-          <entry key="py" value="20" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="HTML" value="17" />
-          <entry key="Python" value="20" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="html" value="2386" />
-          <entry key="py" value="1204" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="HTML" value="2386" />
-          <entry key="Python" value="1204" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="39" column="64" lean-forward="true" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
+            <state relative-caret-position="369">
+              <caret line="60" column="85" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="85" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
-                <marker date="1546538657068" expanded="true" signature="1735:2621" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/movies.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="79" column="31" lean-forward="true" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/collaborative.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-240">
-              <caret line="23" column="95" selection-start-line="23" selection-start-column="95" selection-end-line="23" selection-end-column="95" />
+            <state relative-caret-position="306">
+              <caret line="107" column="44" selection-start-line="107" selection-start-column="44" selection-end-line="107" selection-end-column="44" />
+              <folding>
+                <element signature="n#style#0;n#div#11;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#11;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#12;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#13;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#13;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rs/collaborative_filtering_handler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-705">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="2890">
+              <caret line="286" selection-start-line="286" selection-end-line="286" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -121,6 +82,9 @@
       <find>get_director</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -129,10 +93,10 @@
         <option value="$PROJECT_DIR$/rs/popularity.py" />
         <option value="$PROJECT_DIR$/rs/contentBases_option2.py" />
         <option value="$PROJECT_DIR$/templates/recommendation.html" />
-        <option value="$PROJECT_DIR$/rs/collaborative_filtering_handler.py" />
-        <option value="$PROJECT_DIR$/templates/collaborative.html" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/templates/movies.html" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/templates/collaborative.html" />
+        <option value="$PROJECT_DIR$/rs/collaborative_filtering_handler.py" />
       </list>
     </option>
   </component>
@@ -143,10 +107,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="55" />
-    <option name="y" value="25" />
-    <option name="width" value="933" />
-    <option name="height" value="1055" />
+    <option name="x" value="20" />
+    <option name="y" value="40" />
+    <option name="width" value="2520" />
+    <option name="height" value="1200" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -158,22 +122,12 @@
         <subPane>
           <expand>
             <path>
-              <item name="rc_ContentBased" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rc_ContentBased" type="462c0819:PsiDirectoryNode" />
+              <item name="movie-recommendation-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movie-recommendation-system" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="rc_ContentBased" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rc_ContentBased" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rc_ContentBased" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rc_ContentBased" type="462c0819:PsiDirectoryNode" />
-              <item name="rs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rc_ContentBased" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rc_ContentBased" type="462c0819:PsiDirectoryNode" />
+              <item name="movie-recommendation-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movie-recommendation-system" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -185,7 +139,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/FRI/2 letnik/IZMENJAVA/CLASSES/AI/PROJECT/movie-recommendation-system" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -201,7 +155,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Flask server.rc_ContentBased">
+  <component name="RunManager" selected="Python.popularity">
     <configuration name="contentBased_engine" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="rc_ContentBased" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -306,7 +260,6 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Flask server.rc_ContentBased" />
       <item itemvalue="Python.popularity" />
       <item itemvalue="Python.contentBased_engine" />
       <item itemvalue="Python.contentBased_option1" />
@@ -335,9 +288,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="25" width="1865" height="1055" extended-state="6" />
+    <frame x="-6" y="-6" width="1293" height="693" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12149533" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12092283" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -348,7 +302,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
@@ -363,9 +317,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/flask/app.py">
@@ -395,13 +346,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/recommendation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="59" column="120" selection-start-line="59" selection-start-column="120" selection-end-line="59" selection-end-column="120" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/recommendation.html" />
     <entry file="file://$PROJECT_DIR$/rs/contentBased_option1.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -424,35 +369,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/movies.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="79" column="31" lean-forward="true" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
+        <state relative-caret-position="1343">
+          <caret line="79" column="31" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/collaborative.html">
+    <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-240">
-          <caret line="23" column="95" selection-start-line="23" selection-start-column="95" selection-end-line="23" selection-end-column="95" />
+        <state relative-caret-position="369">
+          <caret line="60" column="85" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="85" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rs/collaborative_filtering_handler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-705">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="2890">
+          <caret line="286" selection-start-line="286" selection-end-line="286" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/templates/collaborative.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="39" column="64" lean-forward="true" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
+        <state relative-caret-position="306">
+          <caret line="107" column="44" selection-start-line="107" selection-start-column="44" selection-end-line="107" selection-end-column="44" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <marker date="1546538657068" expanded="true" signature="1735:2621" ph="..." />
+            <element signature="n#style#0;n#div#11;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#11;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#12;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#13;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#13;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#14;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

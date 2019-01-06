@@ -9,6 +9,22 @@ import time
 
 from surprise.prediction_algorithms.matrix_factorization import NMF
 
+
+def get_top_n(predictions, n=10):
+
+    # First map the predictions to each user.
+    top_n = defaultdict(list)
+    for uid, iid, true_r, est, _ in predictions:
+        top_n[uid].append((iid, est))
+
+    # Then sort the predictions for each user and retrieve the k highest ones.
+    for uid, user_ratings in top_n.items():
+        user_ratings.sort(key=lambda x: x[1], reverse=True)
+        top_n[uid] = user_ratings[:n]
+
+    return top_n
+
+
 def use_svd():
     start = time.time()
     performance = []
@@ -81,6 +97,60 @@ def use_knn():
 
     return performance
 
+def use_cosine_similarity():
+    start = time.time()
+    performance = []
+
+    data = Dataset.load_builtin('ml-100k')
+    trainset = data.build_full_trainset()
+
+    print('Using cosine similarity')
+    sim_options = {'name': 'cosine',
+                   'user_based': False  # compute  similarities between items
+                   }
+    algo_cosine = KNNBasic(sim_options=sim_options)
+    algo_cosine.fit(trainset)
+
+    testset = trainset.build_anti_testset()
+    predictions_KNN = algo_cosine.test(testset)
+
+    accuracy_rmse = accuracy.rmse(predictions_KNN)
+    accuracy_mae = accuracy.mae(predictions_KNN)
+    performance.append(accuracy_rmse)
+    performance.append(accuracy_mae)
+
+    end = time.time()
+    performance.append(end - start)
+
+    return performance
+
+def use_pearson_baseline():
+    start = time.time()
+    performance = []
+
+    data = Dataset.load_builtin('ml-100k')
+    trainset = data.build_full_trainset()
+
+    print('Using Pearson baseline')
+    sim_options = {'name': 'pearson_baseline',
+                   'shrinkage': 0  # no shrinkage
+                   }
+    algo_pearson = KNNBasic(sim_options=sim_options)
+    algo_pearson.fit(trainset)
+
+    testset = trainset.build_anti_testset()
+    predictions_KNN = algo_pearson.test(testset)
+
+    accuracy_rmse = accuracy.rmse(predictions_KNN)
+    accuracy_mae = accuracy.mae(predictions_KNN)
+    performance.append(accuracy_rmse)
+    performance.append(accuracy_mae)
+
+    end = time.time()
+    performance.append(end - start)
+
+    return performance
+
 def use_als():
     start = time.time()
     performance = []
@@ -90,7 +160,7 @@ def use_als():
 
     print('Using ALS')
     bsl_options = {'method': 'als',
-                   'n_epochs': 5,
+                   'n_epochs': 20,
                    'reg_u': 12,
                    'reg_i': 5
                    }
@@ -100,7 +170,8 @@ def use_als():
     testset = trainset.build_anti_testset()
     predictions_ALS = algo_ALS.test(testset)
 
-    accuracy_rmse = accuracy.rmse(predictions_ALS)
+    accuracy_rmse \
+        = accuracy.rmse(predictions_ALS)
     accuracy_mae = accuracy.mae(predictions_ALS)
     performance.append(accuracy_rmse)
     performance.append(accuracy_mae)
@@ -119,7 +190,7 @@ def use_sgd():
 
     print('Using SGD')
     bsl_options = {'method': 'sgd',
-                   'learning_rate': .00005,
+                   'learning_rate': .005,
                    }
 
     algo_SGD = BaselineOnly(bsl_options=bsl_options)

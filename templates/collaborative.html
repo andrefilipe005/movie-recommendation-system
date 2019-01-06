@@ -90,8 +90,36 @@
     </div>
 </div>
 
-<div class="row" style="margin-bottom: 5%;">
+<div class="row">
     <div id="use-knn" class="col-md-12" style="padding-left: 15%; padding-right: 15%;">
+
+    </div>
+</div>
+
+<div class="row" style="margin-top: 5%;">
+    <div id="cosine" class="col-md-12" style="padding-left: 15%; padding-right: 15%;">
+        <ul class="list-group">
+            <li class="list-group-item text-primary">Cosine similarity</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div id="use-cosine" class="col-md-12" style="padding-left: 15%; padding-right: 15%;">
+
+    </div>
+</div>
+
+<div class="row" style="margin-top: 5%;">
+    <div id="pearson" class="col-md-12" style="padding-left: 15%; padding-right: 15%;">
+        <ul class="list-group">
+            <li class="list-group-item text-primary">Pearson similarity</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row" style="margin-bottom: 5%;">
+    <div id="use-pearson" class="col-md-12" style="padding-left: 15%; padding-right: 15%;">
 
     </div>
 </div>
@@ -155,6 +183,30 @@
     function NumberListNMF(props) {
       const numbers = props.numbers;
       const listItems = numbers4.map((number) =>
+        <li className="list-group-item" key={number.toString()}>
+          {number}
+        </li>
+      );
+      return (
+        <ul className="list-group">{listItems}</ul>
+      );
+    }
+
+    function NumberListCosine(props) {
+      const numbers = props.numbers;
+      const listItems = numbers5.map((number) =>
+        <li className="list-group-item" key={number.toString()}>
+          {number}
+        </li>
+      );
+      return (
+        <ul className="list-group">{listItems}</ul>
+      );
+    }
+
+    function NumberListPearson(props) {
+      const numbers = props.numbers;
+      const listItems = numbers6.map((number) =>
         <li className="list-group-item" key={number.toString()}>
           {number}
         </li>
@@ -254,6 +306,42 @@
         }
     }
 
+    const performance_cosine = {{ performance_cosine }};
+    numbers5 = []
+    for (var number in performance_cosine)
+    {
+        if (number == 0)
+        {
+            numbers5.push("RMSE: " + performance_cosine[number]);
+        }
+        else if (number == 1)
+        {
+            numbers5.push("MAE: " + performance_cosine[number]);
+        }
+        else if (number == 2)
+        {
+            numbers5.push("TIME: " + performance_cosine[number]);
+        }
+    }
+
+    const performance_pearson = {{ performance_pearson }};
+    numbers6 = []
+    for (var number in performance_pearson)
+    {
+        if (number == 0)
+        {
+            numbers6.push("RMSE: " + performance_pearson[number]);
+        }
+        else if (number == 1)
+        {
+            numbers6.push("MAE: " + performance_pearson[number]);
+        }
+        else if (number == 2)
+        {
+            numbers6.push("TIME: " + performance_pearson[number]);
+        }
+    }
+
     if(numbers.length > 0)
     {
         ReactDOM.render(
@@ -291,6 +379,21 @@
         ReactDOM.render(
           <NumberListNMF numbers4={numbers4} />,
           document.getElementById('use-nmf')
+        );
+    }
+    if(numbers5.length > 0)
+    {
+        ReactDOM.render(
+          <NumberListCosine numbers5={numbers5} />,
+          document.getElementById('use-cosine')
+        );
+    }
+
+    if(numbers6.length > 0)
+    {
+        ReactDOM.render(
+          <NumberListPearson numbers6={numbers6} />,
+          document.getElementById('use-pearson')
         );
     }
 
